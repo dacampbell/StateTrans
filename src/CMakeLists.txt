@@ -4,5 +4,7 @@
 add_library(StateTrans Action.c
                        Machine.c
                        State.c
-                       Transition.cs
-                     )
+                       Transition.c
+                      )
+
+target_include_directories(StateTrans PUBLIC ${PROJEcT_SOURCE_DIR})
