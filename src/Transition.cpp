@@ -60,23 +60,3 @@ void Transition::ExecuteAction()
 {
     this->action();
 }
-
-Trigger Transition::GetTrigger()
-{
-    return this->trigger;
-}
-
-void Transition::SetTrigger(Trigger trigger)
-{
-    this->trigger = trigger;
-}
-
-Action Transition::GetAction()
-{
-    return this->action;
-}
-
-void Transition::SetAction(Action action)
-{
-    this->action = action;
-}

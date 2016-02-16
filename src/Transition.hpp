@@ -51,12 +51,6 @@ namespace StateTrans
             bool CheckTrigger();
             void ExecuteAction();
 
-            Trigger GetTrigger();
-            void    SetTrigger(Trigger);
-
-            Action  GetAction();
-            void    SetAction(Action);
-
         private:
             Trigger trigger;
             Action  action;
