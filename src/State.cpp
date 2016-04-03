@@ -65,3 +65,28 @@ void State::UpdateState()
         }
     }
 }
+
+Operation State::GetOperation() const
+{
+    return this->operation;
+}
+
+void State::SetOperation(const Operation& operation)
+{
+    this->operation = operation;
+}
+
+std::string State::GetName() const
+{
+    return this->name;
+}
+
+void State::SetName(const std::string& name)
+{
+    this->name = name;
+}
+
+void State::AddTransition(const Transition& transition)
+{
+    this->transitions.push_back(transition);
+}

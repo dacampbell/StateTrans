@@ -52,6 +52,14 @@ namespace StateTrans
 
             void UpdateState();
 
+            Operation GetOperation() const;
+            void SetOperation(const Operation&);
+
+            std::string GetName() const;
+            void SetName(const std::string&);
+
+            void AddTransition(const Transition&);
+
         private:
             std::string name;
             Operation operation;
