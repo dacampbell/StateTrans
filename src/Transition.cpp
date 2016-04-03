@@ -39,6 +39,13 @@
 
 using namespace StateTrans;
 
+Transition::Transition() :
+    trigger(),
+    action()
+{
+
+}
+
 Transition::Transition(Trigger trigger, Action action) :
     trigger(trigger),
     action(action)
@@ -59,4 +66,24 @@ bool Transition::CheckTrigger()
 void Transition::ExecuteAction()
 {
     this->action();
+}
+
+Trigger Transition::GetTrigger() const
+{
+    return this->trigger;
+}
+
+void Transition::SetTrigger(const Trigger& trigger)
+{
+    this->trigger = trigger;
+}
+
+Action Transition::GetAction() const
+{
+    return this->action;
+}
+
+void Transition::SetAction(const Action& action)
+{
+    this->action = action;
 }

@@ -45,11 +45,18 @@ namespace StateTrans
     class Transition
     {
         public:
+            Transition();
             Transition(Trigger, Action);
             ~Transition();
 
             bool CheckTrigger();
             void ExecuteAction();
+
+            Trigger GetTrigger() const;
+            void SetTrigger(const Trigger&);
+
+            Action GetAction() const;
+            void SetAction(const Action&);
 
         private:
             Trigger trigger;
