@@ -45,17 +45,63 @@ namespace StateTrans
     class Transition
     {
         public:
+            /**
+              * Constructor for Transitions that takes no arguments
+              */
             Transition();
+
+            /**
+             * Constructor for Transitions that takes a Trigger and an Action
+             *
+             * @param trigger Trigger for the transition
+             *
+             * @param action Action for the Transitions
+             */
             Transition(Trigger, Action);
+
+            /**
+             * Destructor for Transitions
+             */
             ~Transition();
 
+            /**
+             * Checks the current state of the trigger for the Transition
+             *
+             * @return State of the Trigger
+             */
             bool CheckTrigger();
+
+            /**
+             * Executes the action of the Transition
+             */
             void ExecuteAction();
 
+            /**
+             * Get the Trigger for the Transition
+             *
+             * @return Trigger of the Transition
+             */
             Trigger GetTrigger() const;
+
+            /**
+             * Set the Trigger for the Transition
+             *
+             * @param trigger Trigger to be set
+             */
             void SetTrigger(const Trigger&);
 
+            /**
+             * Get the Action for the Transition
+             *
+             * @return Action of the Transition
+             */
             Action GetAction() const;
+
+            /**
+             * Set the Action for the Transition
+             *
+             * @param action Action to be set
+             */
             void SetAction(const Action&);
 
         private:
