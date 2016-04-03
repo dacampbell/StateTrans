@@ -47,6 +47,7 @@ namespace StateTrans
     class State
     {
         public:
+            State();
             State(std::string, Operation, std::vector<Transition>);
             ~State();
 

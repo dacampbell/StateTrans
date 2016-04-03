@@ -39,6 +39,14 @@
 
 using namespace StateTrans;
 
+State::State() :
+    name(),
+    operation(),
+    transitions()
+{
+
+}
+
 State::State(std::string name, Operation operation, std::vector<Transition> transitions) :
     name(name),
     operation(operation),
