@@ -6,4 +6,4 @@ add_library(StateTrans Machine.cpp
                        Transition.cpp
                       )
 
-target_include_directories(StateTrans PUBLIC ${PROJEcT_SOURCE_DIR})
+target_include_directories(StateTrans PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
