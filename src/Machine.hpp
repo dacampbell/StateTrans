@@ -32,3 +32,24 @@
  * This class represents a finite state machine.  It is responsible for managing
  * the machine and controlling the transition between states.
  */
+
+#include <string>
+#include <map>
+
+#include "States.hpp"
+
+namespace StateTrans
+{
+    class Machine
+    {
+        public:
+            Machine();
+            Machine(std::map<std::string, State>, std::string);
+            ~Machine();
+
+        private:
+            std::map<std::string> states;
+
+
+    };
+}
