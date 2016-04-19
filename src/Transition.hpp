@@ -35,6 +35,9 @@
  * the measures that are taken to transition over to the next state.
  */
 
+#ifndef TRANSITION_HPP_66C3A6E53EF44E6EBDDAD71B3252D6A6
+#define TRANSITION_HPP_66C3A6E53EF44E6EBDDAD71B3252D6A6
+
 #include <functional>
 
 namespace StateTrans
@@ -110,3 +113,5 @@ namespace StateTrans
     };
 
 } // end namespace
+
+#endif

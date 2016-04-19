@@ -33,6 +33,9 @@
  * the machine and controlling the transition between states.
  */
 
+#ifndef MACHINE_HPP_65083FA30B194E769ACA5E560D9E200B
+#define MACHINE_HPP_65083FA30B194E769ACA5E560D9E200B
+
 #include <string>
 #include <map>
 
@@ -62,3 +65,5 @@ namespace StateTrans
             std::map<std::string, State> states;
     };
 }
+
+#endif

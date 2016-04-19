@@ -35,6 +35,9 @@
  * machine.
  */
 
+#ifndef STATE_HPP_9F6091FF276D42BA8446B45454883361
+#define STATE_HPP_9F6091FF276D42BA8446B45454883361
+
 #include <functional>
 #include <vector>
 
@@ -67,3 +70,5 @@ namespace StateTrans
             std::vector<Transition> transitions;
     };
 } // end namespace
+
+#endif
