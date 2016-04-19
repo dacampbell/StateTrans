@@ -36,7 +36,7 @@
 #include <string>
 #include <map>
 
-#include "States.hpp"
+#include "State.hpp"
 
 namespace StateTrans
 {
@@ -47,9 +47,18 @@ namespace StateTrans
             Machine(std::map<std::string, State>, std::string);
             ~Machine();
 
+            void UpdateMachine();
+
+            void AddState(const State& state);
+            void SetState(const std::string&);
+            std::string GetState() const;
+
+            std::string GetName() const;
+            void SetName(const std::string&);
+
         private:
-            std::map<std::string> states;
-
-
+            std::string name;
+            std::string currentState;
+            std::map<std::string, State> states;
     };
 }

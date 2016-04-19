@@ -34,3 +34,56 @@
  * next state.  Each state is designed to be contained within a finite state
  * machine.
  */
+
+#include "Machine.hpp"
+
+namespace StateTrans
+{
+    Machine::Machine() :
+        name(),
+        states()
+    {
+
+    }
+
+    Machine::Machine(std::map<std::string, State> states, std::string name) :
+        name(name)
+    {
+        states = states;
+    }
+
+    Machine::~Machine()
+    {
+
+    }
+
+    void Machine::UpdateMachine()
+    {
+        states[currentState].UpdateState();
+    }
+
+    void Machine::SetState(const std::string& state)
+    {
+        currentState = state;
+    }
+
+    void Machine::AddState(const State& state)
+    {
+        states.emplace(state.GetName(), state);
+    }
+
+    std::string Machine::GetState() const
+    {
+        return currentState;
+    }
+
+    std::string Machine::GetName() const
+    {
+        return name;
+    }
+
+    void Machine::SetName(const std::string& name)
+    {
+        this->name = name;
+    }
+}
