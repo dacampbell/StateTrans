@@ -50,18 +50,66 @@ namespace StateTrans
     class State
     {
         public:
+            /**
+             * Constructor for States that takes no arguments
+             */
             State();
+
+            /**
+             * Constructor for States that takes a name and a list of Transitions
+             *
+             * @param name Name of the state
+             *
+             * @param operation Operation to be performed every update
+             *
+             * @param transitions List of transitions for the state
+             */
             State(std::string, Operation, std::vector<Transition>);
+
+            /**
+             * Destructor for States
+             */
             ~State();
 
+            /**
+             * Update the current state by performing the commanded operation
+             * and checking the condition of the triggers
+             */
             void UpdateState();
 
+            /**
+             * Get the operation for the state
+             *
+             * @return The operation for the state
+             */
             Operation GetOperation() const;
+
+            /**
+             * Set the operation for the state
+             *
+             * @param operation The operation for the state
+             */
             void SetOperation(const Operation&);
 
+            /**
+             * Get the name of the state
+             *
+             * @return The name of the state
+             */
             std::string GetName() const;
+
+            /**
+             * Set the name of the state
+             *
+             * @param name The name of the state
+             */
             void SetName(const std::string&);
 
+            /**
+             * Add a transition to the state
+             *
+             * @param transition The transition to add the state
+             */
             void AddTransition(const Transition&);
 
         private:
