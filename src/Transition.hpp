@@ -58,7 +58,7 @@ namespace StateTrans
              *
              * @param trigger Trigger for the transition
              *
-             * @param action Action for the Transitions
+             * @param action Action for the transition
              */
             Transition(Trigger, Action);
 

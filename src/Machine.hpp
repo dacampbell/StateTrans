@@ -46,17 +46,65 @@ namespace StateTrans
     class Machine
     {
         public:
+            /**
+             * Constructor for Machine that takes no arguments
+             */
             Machine();
+
+            /**
+             * Constructor for Machine that takes a mapping of name to state as
+             * well as a name for the machine
+             *
+             * @param states Mapping of names to states for the machine
+             *
+             * @param name Name for the machine
+             */
             Machine(std::map<std::string, State>, std::string);
+
+            /**
+             * Destructor for machine
+             */
             ~Machine();
 
+            /**
+             * Runs the update function on the current state that the machine is
+             * running.
+             */
             void UpdateMachine();
 
+            /**
+             * Adds a state to the current list of states the machine manages.
+             *
+             * @param state The state to add to the machine
+             */
             void AddState(const State& state);
+
+            /**
+             * Sets the current state of the state machine
+             *
+             * @param state The name of the state to set the machine to
+             */
             void SetState(const std::string&);
+
+            /**
+             * Gets the current stat of the state machine
+             *
+             * @return Current state of the state machine
+             */
             std::string GetState() const;
 
+            /**
+             * Get the name of the machine
+             *
+             * @return The name of the machine
+             */
             std::string GetName() const;
+
+            /**
+             * Set the name if the machine
+             +
+             * @param name Name to set the machine to
+             */
             void SetName(const std::string&);
 
         private:
