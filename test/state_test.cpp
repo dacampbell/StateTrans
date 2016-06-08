@@ -3,7 +3,7 @@
 
 #include "Transition.hpp"
 
-TEST(TransitionTest, TransitionContruction)
+TEST(StateTest, StateConstruction)
 {
 	using namespace StateTrans;
 
@@ -17,6 +17,19 @@ TEST(TransitionTest, TransitionContruction)
 
         };
 
+	std::function<void()> operation = [] () -> void
+		{
+
+		};
+
     Transition transition1 = Transition();
     Transition transition2 = Transition(trigger, action);
+
+	std::vector<Transition> transitions;
+	transitions.push_back(transition1);
+	transitions.push_back(transition1);
+	transitions.push_back(transition1);
+
+	State state1 = State();
+	State state2 = State("Test State", operation, transitions);
 }
